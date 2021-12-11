@@ -1,0 +1,17 @@
+extends baseEmail 
+
+block content 
+
+  p Hi #{firstName},
+  p To get full access to your accont please verify your email-address: #{url}.
+  p (Website for this action not yet implemented!)
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Verify your email
+  p If you didn't signed into Natours forget this email!
